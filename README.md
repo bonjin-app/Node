@@ -5,4 +5,5 @@ Node.js란
 - V8: 크롬에 탑재된 자바스크립트 엔진
 - 대용량 서비스를 위해 Ryan Lienhart Dahl이 개발
 
-출처 [https://ko.wikipedia.org/wiki/Node.js](https://ko.wikipedia.org/wiki/Node.js)
+출처 
+- [위키백과](https://ko.wikipedia.org/wiki/Node.js)
