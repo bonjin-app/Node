@@ -6,6 +6,8 @@ Node.js란
 - 대용량 서비스를 위해 Ryan Lienhart Dahl이 개발
 - https://nodejs.org/ko/download/
 
+NPM
+- Node Package Manager
 
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)
