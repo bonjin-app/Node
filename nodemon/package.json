@@ -1,0 +1,13 @@
+{
+  "name": "nodemon",
+  "version": "1.0.0",
+  "description": "# Linux - Global 설치 npm install -g nodemon  or sudo npm install -g nodemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
