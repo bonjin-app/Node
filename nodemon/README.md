@@ -5,3 +5,7 @@
 npm install -g nodemon 
 or
 sudo npm install -g nodemon
+
+
+명령어 
+nodemon index.js
