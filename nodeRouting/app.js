@@ -1,12 +1,16 @@
 const express = require('express');
 
-const http = express();
+const admin = require('./routes/admin');
+
+const app = express();
 const port = 3000;
 
-http.get("/", (request, response) => {
+app.get("/", (request, response) => {
     response.send('hello express');
 });
 
-http.listen(port, () => {
+app.use('/admin', admin);
+
+app.listen(port, () => {
     console.log("Express Listening on port", port);
 });
