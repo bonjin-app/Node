@@ -14,4 +14,12 @@ router.get('/products', (req, res) => {
     });
 });
 
+router.get('/products/write', (req, res) => {
+    res.render('admin/write.html');
+});
+
+router.post('/products/write', (req, res) => {
+    res.render(req.body);
+});
+
 module.exports = router;
