@@ -6,6 +6,14 @@ Node.js란
 - 대용량 서비스를 위해 Ryan Lienhart Dahl이 개발
 - https://nodejs.org/ko/download/
 
+REST API
+GET /users => 모든 사용자 정보
+POST /user => 사용자 추가
+GET /user/{id} => 사용자 정보
+PUT /user/{id} => 사용자 수정
+DELETE /user/{id} => 삭제
+
+
 # NPM
 - Node Package Manager
 - https://www.npmjs.com/
@@ -38,6 +46,11 @@ Window
 - npm install margan
 - 사용자가 어떤 요청을 하는지 콘솔로 확인
 - app.use(logger('dev'));
+
+# Static File
+- image, css, js
+- 특정 folder에 접근을 허용
+- app.use('/static', express.static('static'));
 
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)

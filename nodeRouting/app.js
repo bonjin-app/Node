@@ -19,6 +19,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use('/static', express.static('static'));
+
 app.get("/", (request, response) => {
     response.send('hello express');
 });
