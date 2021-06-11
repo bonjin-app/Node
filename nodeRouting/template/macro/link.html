@@ -1,0 +1,10 @@
+{# 
+    href : 태그안의 링크
+    text : 링크안에 들어갈 텍스트
+    currentUrl : 현재 url
+ #}
+{% macro link(href, text, currentUrl) %}
+    <li {% if href == currentUrl  %} class="active" {% endif %}>
+        <a href="{{ href }}">{{ text }}</a>
+    </li>
+{% endmacro %}

@@ -23,6 +23,7 @@ app.use('/static', express.static('static'));
 
 app.use( (req, res, next) => {
     app.locals.isLogin = false;
+    app.locals.reqPath = req.path;
     next();
 });
 
