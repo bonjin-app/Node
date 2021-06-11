@@ -33,6 +33,14 @@ app.get("/", (request, response) => {
 app.use('/admin', admin);
 app.use('/contacts', contacts);
 
+app.use( (req, res, next) => {
+    res.status(400).render('common/404.html');
+});
+
+app.use( (req, res, next) => {
+    res.status(500).render('common/500.html');
+});
+
 app.listen(port, () => {
     console.log("Express Listening on port", port);
 });

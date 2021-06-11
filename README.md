@@ -55,5 +55,8 @@ Window
 # Global Variable
 - app.locals.변수명
 
+# Error Page
+- 404, 500
+
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)
