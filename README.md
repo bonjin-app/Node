@@ -57,6 +57,7 @@ Window
 
 # Error Page
 - 404, 500
+- res.status(500).render('common/500.html');
 
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)
