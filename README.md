@@ -52,5 +52,8 @@ Window
 - 특정 folder에 접근을 허용
 - app.use('/static', express.static('static'));
 
+# Global Variable
+- app.locals.변수명
+
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)

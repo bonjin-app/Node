@@ -21,6 +21,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/static', express.static('static'));
 
+app.use( (req, res, next) => {
+    app.locals.isLogin = false;
+    next();
+});
+
 app.get("/", (request, response) => {
     response.send('hello express');
 });
