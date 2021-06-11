@@ -9,7 +9,7 @@ router.get('/products', (req, res) => {
     // res.send('admin products 이후 url');
 
     res.render('admin/products.html', {
-        message: 'hello!!!22',
+        message: `<h1>hello!!!22</h1>`,
         online: 'express',
     });
 });
