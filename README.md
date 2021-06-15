@@ -69,6 +69,9 @@ Window
 Macro
 
 
+# Sequelize
+ORM(Object-Relational Mapping)
+Nodejs로 mysql 또는 postgresql을 제어할 수 있게 해준다.
 
 출처 
 - [위키백과](https://ko.wikipedia.org/wiki/Node.js)
