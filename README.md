@@ -42,6 +42,11 @@ Window
   1) 로그인을 해야만 접속할 수 있게
   2) (request, response) 이전에 req, res, next 매개변수를 받는 함수를 작성.
 
+- 권장구조
+  1) controllers/index 대분류 url + 폴더 위치
+  2) controllers/admin/index.js (admin url + middle ware)
+  3) controllers/admin/admin.ctrl.js (Routing)
+
 # Morgan
 - npm install margan
 - 사용자가 어떤 요청을 하는지 콘솔로 확인
@@ -62,6 +67,7 @@ Window
 # Nunjucks
 
 Macro
+
 
 
 출처 
