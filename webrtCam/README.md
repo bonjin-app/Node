@@ -14,3 +14,13 @@ npm i express ejs socket.io
 ```bash
 npm i -- save-dev nodemon
 ```
+
+
+### Dev Start
+package.json
+add script
+"devStart": "nodemon server.js"
+
+```bash
+npm run devStart
+```
