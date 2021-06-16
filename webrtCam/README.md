@@ -15,6 +15,12 @@ npm i express ejs socket.io
 npm i -- save-dev nodemon
 ```
 
+### npm peer install
+```bash
+npm i -g peer
+or
+npm i peer
+```
 
 ### Dev Start
 package.json
