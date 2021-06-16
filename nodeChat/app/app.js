@@ -1,1 +1,1 @@
-const io = io('http://localhost:8080')
+const socket = io('ws://localhost:3000');
