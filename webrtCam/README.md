@@ -1,4 +1,6 @@
 # webrtc cam
+유튜브를 보며 만들어 보는 프로젝트
+https://www.youtube.com/watch?v=DvlyzDZDEq4
 
 ### npm init
 ```bash
