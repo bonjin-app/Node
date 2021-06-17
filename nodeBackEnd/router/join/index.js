@@ -14,7 +14,8 @@ connection.connect();
 
 router.get('/', function(req, res) {
     console.log(req.body);
-    res.sendFile(path.join(__dirname, '../../public/join.html'));
+    // res.sendFile(path.join(__dirname, '../../public/join.html'));
+    res.render('join');
 });
 
 router.post('/', function(req, res) {
