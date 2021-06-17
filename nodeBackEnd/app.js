@@ -23,5 +23,5 @@ app.get('/main', function(req, res) {
 
 app.post('/email_post', function(req, res) {
     console.log(req.body);
-    res.send("post response");
+    res.send(`<h1>welcome ${req.body.email}</h1>`);
 })
