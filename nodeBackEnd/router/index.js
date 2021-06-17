@@ -4,6 +4,7 @@ const path = require('path');
 
 router.use('/main', require('./main'));
 router.use('/email', require('./email'));
+router.use('/join', require('./join/index'));
 
 router.get('/', function(req, res) {
 //    res.send(`<h1>hello world</h1>`); 
