@@ -32,4 +32,11 @@ app.post('/email_post', function(req, res) {
 
 app.post('/ajax_send_email', (req, res) => {
     console.log(req.body.email);
+
+    // check validation
+    var responseData = {
+                            result: 'ok',
+                            email: req.body.email
+                        };
+    res.json(responseData);
 });

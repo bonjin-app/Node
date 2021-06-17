@@ -13,6 +13,8 @@
         <input type="submit" value="submit">
     </form>
 
+    <div class="result"></div>
+
     <button class="ajaxsend">ajaxsend</button>
 
     <script>
@@ -27,7 +29,11 @@
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
-                console.log("asdfasdf")
+                var result = JSON.parse(xhr.responseText);
+                if (result.result !== "ok") {
+                    return;
+                }
+                document.querySelector('.result').innerHTML = result.email;
             });
         }
     </script>
