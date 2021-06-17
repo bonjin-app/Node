@@ -35,7 +35,8 @@ npm install ejs
 app.set('view engine', 'ejs');
 ```
 
-### DB
+### DB MySQL
+https://github.com/mysqljs/mysql
 ```bash
 npm install mysql
 ```

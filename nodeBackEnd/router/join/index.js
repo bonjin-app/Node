@@ -23,11 +23,17 @@ router.post('/', function(req, res) {
     var name = body.name;
     var password = body.password;
 
-    var query = connection.query(`insert into user(email, name, password) values('${email}', '${name}', '${password}')`, function(err, rows, fields) {
+    var sql = {email: email, name: name, password: password};
+    // var query = connection.query(`insert into user(email, name, password) values('${email}', '${name}', '${password}')`, function(err, rows, fields) {
+    var query = connection.query('insert into user set ?', sql, function(err, rows, fields) {
         if (err) throw err;
-        console.log('ok db insert');
+        console.log('ok db insert', rows);
+
+        res.render('welcome', {
+            id: rows.insertId,
+            name: name,
+        });
     });
-    res.redirect('/join');
 });
 
 module.exports = router;
