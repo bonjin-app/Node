@@ -10,6 +10,7 @@ const connection = mysql.createConnection({
     password: "1234",
     database: "node"
 });
+connection.connect();
 
 app.listen(3000, () => {
     console.log('start! express server on port 3000');
@@ -43,9 +44,18 @@ app.post('/ajax_send_email', (req, res) => {
     console.log(req.body.email);
 
     // check validation
-    var responseData = {
-                            result: 'ok',
-                            email: req.body.email
-                        };
+    var email = req.body.email;
+    var responseData = {};
+
+    var query = connection.query(`select name from user where email = '${email}'`, function(err, rows, fields) {
+        if (err) throw err;
+        if (rows[0]) {
+            console.log(rows[0]);
+            responseData.result = "ok";
+            responseData.name = rows[0].name;
+        } else {
+            console.log(`none: ${rows[0]}`)
+        }
+    })
     res.json(responseData);
 });
