@@ -12,3 +12,8 @@ app.get('/', function(req, res){
 //    res.send(`<h1>hello world</h1>`); 
     res.sendFile(__dirname+'/public/main.html');
 });
+
+app.get('/main', function(req, res){
+//    res.send(`<h1>hello world</h1>`); 
+    res.sendFile(__dirname+'/public/main.html');
+});
