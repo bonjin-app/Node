@@ -23,3 +23,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 ```bash
 npm install ejs
 ```
+
+```js
+app.set('view engine', 'ejs');
+```
