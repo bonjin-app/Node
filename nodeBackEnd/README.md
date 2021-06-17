@@ -40,3 +40,8 @@ https://github.com/mysqljs/mysql
 ```bash
 npm install mysql
 ```
+
+### passport
+```bash
+npm install passport passport-local express-session connect-flash --save-dev
+```
