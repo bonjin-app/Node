@@ -55,7 +55,9 @@ app.post('/ajax_send_email', (req, res) => {
             responseData.name = rows[0].name;
         } else {
             console.log(`none: ${rows[0]}`)
+            responseData.result = "none";
+            responseData.name = "";
         }
-    })
-    res.json(responseData);
+        res.json(responseData);
+    });
 });
