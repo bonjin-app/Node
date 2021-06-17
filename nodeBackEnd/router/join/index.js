@@ -18,7 +18,16 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    res.send('join post');
+    var body = req.body;
+    var email = body.email;
+    var name = body.name;
+    var password = body.password;
+
+    var query = connection.query(`insert into user(email, name, password) values('${email}', '${name}', '${password}')`, function(err, rows, fields) {
+        if (err) throw err;
+        console.log('ok db insert');
+    });
+    res.redirect('/join');
 });
 
 module.exports = router;
