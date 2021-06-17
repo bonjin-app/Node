@@ -42,6 +42,11 @@ npm install mysql
 ```
 
 ### passport
+passport: http://www.passportjs.org/docs/downloads/html/
+passport-local: http://www.passportjs.org/packages/passport-local/
+express-session: https://www.npmjs.com/package/express-session
+connect-flash: https://www.npmjs.com/package/connect-flash
+
 ```bash
 npm install passport passport-local express-session connect-flash --save-dev
 ```
