@@ -29,3 +29,7 @@ app.post('/email_post', function(req, res) {
         email: req.body.email
     });
 })
+
+app.post('/ajax_send_email', (req, res) => {
+    console.log(req.body.email);
+});

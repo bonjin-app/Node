@@ -17,7 +17,7 @@
 
     <script>
         document.querySelector('.ajaxsend').onclick = () => {
-            sendAjax('http://127.0.0.1:3000/ajax_send_email', document.forms[0].email);
+            sendAjax('http://127.0.0.1:3000/ajax_send_email', document.forms[0].elements[0].value);
         };
 
         function sendAjax(url, data) {
