@@ -5,7 +5,7 @@
 ```bash
 npm init -y
 ```
-
+https://expressjs.com/ko/
 - express install
 ```bash
 npm install express
@@ -26,4 +26,9 @@ npm install ejs
 
 ```js
 app.set('view engine', 'ejs');
+```
+
+### DB
+```bash
+npm install mysql
 ```

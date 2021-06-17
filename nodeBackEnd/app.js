@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host: "gigas.synology.me",
+    port: 3306,
+    user: 'node',
+    password: "1234",
+    database: "node"
+});
 
 app.listen(3000, () => {
     console.log('start! express server on port 3000');
