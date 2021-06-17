@@ -13,10 +13,17 @@ npm install express
 
 ### body-parser
 ```js
+// deprecate
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+// new
+const express = require('express');
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 ```
 
 ### View Engine - ejs
