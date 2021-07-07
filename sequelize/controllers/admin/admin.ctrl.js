@@ -10,11 +10,11 @@ exports.getProducts = (_, res) => {
     })
 }
 
-exports.get_products_write = (_, res) => {
+exports.getProductsWrite = (_, res) => {
     res.render('admin/write.html');
 }
 
-exports.post_products_write = (req, res) => {
+exports.postProductsWrite = (req, res) => {
     models.product.create({
         name: req.body.name,
         price: req.body.price,
@@ -22,4 +22,11 @@ exports.post_products_write = (req, res) => {
     }).then(() => {
         res.redirect('/admin/products');
     })
+}
+
+exports.getProductsDetail = (req, res) => {
+    models.product.findByPk(req.params.id)
+        .then((product) => {
+            res.render('admin/detail.html', { product });
+        });
 }
