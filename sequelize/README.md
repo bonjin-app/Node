@@ -11,3 +11,8 @@ promiss
 
 # moment 
 날짜 포맷
+
+# Promise
+resolve, reject를 인자로 갖는 함수
+
+Promise.all([]).then

@@ -1,27 +1,45 @@
 const models = require('../../models');
 
-exports.getProducts = (_, res) => {
-    models.product.findAll({
+exports.getProducts = async (_, res) => {
 
-    }).then((products) => {
-        res.render('admin/products.html', {
-            products
-        })
-    })
+    // await
+    const products = await models.product.findAll();
+    res.render('admin/products.html', { products });
+
+    // models.product.findAll({
+
+    // }).then((products) => {
+    //     res.render('admin/products.html', {
+    //         products
+    //     })
+    // })
 }
 
 exports.getProductsWrite = (_, res) => {
     res.render('admin/write.html');
 }
 
-exports.postProductsWrite = (req, res) => {
-    models.product.create({
-        name: req.body.name,
-        price: req.body.price,
-        description: req.body.description
-    }).then(() => {
+exports.postProductsWrite = async (req, res) => {
+    try {
+        // await
+        await models.product.create({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description
+        })
         res.redirect('/admin/products');
-    })
+
+    } catch (err) {
+        console.log(err)
+    }
+
+    // models.product.create({
+    //     name: req.body.name,
+    //     price: req.body.price,
+    //     description: req.body.description
+    // }).then(() => {
+    //     res.redirect('/admin/products');
+    // })
 }
 
 exports.getProductsDetail = (req, res) => {
