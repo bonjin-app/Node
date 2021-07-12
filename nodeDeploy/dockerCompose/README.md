@@ -13,3 +13,6 @@ docker-compose build
 
 실행
 docker compose up
+
+중지
+docker compose down
