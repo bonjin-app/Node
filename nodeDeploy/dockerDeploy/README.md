@@ -59,12 +59,9 @@ exit
 
 
 # Dockerfile
-FROM 
-
+- FROM 
 기반이 되는 이미지 레이어입니다.
-
 <이미지 이름>:<태그> 형식으로 작성 
-
 ex) ubuntu:14.04
 
 - MAINTAINER 
@@ -75,9 +72,7 @@ ex) ubuntu:14.04
 
 - VOLUME 
 VOLUME은 디렉터리의 내용을 컨테이너에 저장하지 않고 호스트에 저장하도록 설정합니다. 
-
 데이터 볼륨을 호스트의 특정 디렉터리와 연결하려면 docker run 명령에서 -v 옵션을 사용해야 합니다. 
-
 ex) -v /root/data:/data
 
 - CMD
